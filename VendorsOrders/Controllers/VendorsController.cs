@@ -21,14 +21,14 @@ namespace VendorsOrders.Controllers
     public ActionResult Create(string name, string description)
     {
       Vendor vendor = new Vendor(name, description);
-      return RedirectToAction("/"); //redirect to home is assignment requirement
+      return Redirect("/"); //redirect to home is assignment requirement
     }
 
     [HttpGet("/vendors/{vendorId}")]
     public ActionResult Show(int vendorId)
     {
       Vendor vendor = Vendor.Find(vendorId);
-      return View();
+      return View(vendor);
     }
   }
 }
