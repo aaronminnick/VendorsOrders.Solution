@@ -1,0 +1,27 @@
+body {
+  background-color: blanchedalmond;
+}
+
+.container {
+  background-color: white;
+  border: wheat 2px dotted;
+}
+
+#header {
+  text-align: center;
+  color: brown;
+  font-size: 1.5em;
+  font-style: oblique;
+  font-weight: bold;
+  border: wheat 2px dotted;
+}
+
+a {
+  margin-right: 5em;
+  color: brown;
+  font-weight: bold;
+}
+
+input, textarea, label {
+  display: block;
+}

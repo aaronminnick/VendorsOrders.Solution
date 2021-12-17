@@ -1,6 +1,10 @@
 @using VendorsOrders.Models;
 
-<h2>Vendors Index</h2>
+@{
+  Layout = "_Layout";
+}
+
+<h3>Vendors Index</h3>
 @if (Vendor.AllVendors.Count == 0)
 {
   <p>No vendors in system. Please use the link below to add a vendor.</p>
@@ -15,3 +19,4 @@ else
   </ul>
 }
 <a href="/vendors/new">Add a vendor</a>
+<a href="/">Home</a>

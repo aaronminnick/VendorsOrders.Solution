@@ -1,6 +1,10 @@
 @using VendorsOrders.Models;
 
-<h2>Orders Index</h2>
+@{
+  Layout = "_Layout";
+}
+
+<h3>Orders Index</h3>
 @if (Order.AllOrders.Count == 0)
 {
   <p>No orders in system. Please add orders through the individual vendor.</p>
@@ -12,7 +16,8 @@ else
   <ul>
   @foreach (Order order in Order.AllOrders)
   {
-    <li><a href="/vendors/@order.VendorId/orders/@order.Id">@order.Title</a></li>
+    <li><a href="/vendors/@order.VendorId/orders/@order.Id">@order.Title (for @Vendor.Find(order.VendorId).Name)</a></li>
   }
   </ul>
 }
+<a href="/">Home</a>
