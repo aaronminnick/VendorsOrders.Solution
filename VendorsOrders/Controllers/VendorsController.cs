@@ -17,14 +17,16 @@ namespace VendorsOrders.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create()
+    public ActionResult Create(string name, string description)
     {
+      Vendor vendor = new Vendor(name, description);
       return RedirectToAction("/"); //redirect to home is assignment requirement
     }
 
     [HttpGet("/vendors/{vendorId}")]
-    public ActionResult Show()
+    public ActionResult Show(int vendorId)
     {
+      Vendors vendor = Vendor.Find(vendorId);
       return View();
     }
   }

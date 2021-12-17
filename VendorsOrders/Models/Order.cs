@@ -24,5 +24,10 @@ namespace VendorsOrders.Models
       AllOrders.Add(this);
       Id = AllOrders.Count - 1;
     }
+
+    public Order Find(int id)
+    {
+      return AllOrders[id];
+    }
   }
 }
