@@ -1,0 +1,19 @@
+<h2>@Model.Name</h2>
+<p>@Model.Description</p>
+@if (Model.Orders.Count == 0)
+{
+  <p>No orders for this vendor in system. Please use the link below to add an order.</p>
+}
+else
+{
+  <h3>Orders:</h3>
+  <p>Select an order to view details.</p>
+  <ul>
+  @foreach (Order order in Model.Orders)
+  {
+    <li><a href="/vendors/@order.VendorId/order/@order.Id">@order.Name</a></li>
+  }
+  </ul>
+}
+<a href="/vendors/@Model.Id/orders/new">Add an order for this vendor</a>
+<a href="/vendors">Vendors index</a>
