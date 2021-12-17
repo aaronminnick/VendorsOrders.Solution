@@ -4,7 +4,7 @@ namespace VendorsOrders.Models
 {
   public class Order
   {
-    private static List<Order> _allOrders = new List<Order> {};
+    public static List<Order> AllOrders = new List<Order> {};
 
     public string Title { get; set; }
     public string Description { get; set; }
@@ -17,8 +17,8 @@ namespace VendorsOrders.Models
       Description = description;
       Price = price;
       Date = date;
-      
-      _allOrders.Add(this);
+
+      AllOrders.Add(this);
     }
   }
 }

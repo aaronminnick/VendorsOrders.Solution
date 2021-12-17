@@ -10,20 +10,20 @@ namespace VendorsOrders.Controllers
     {
       return View();
     }
-    
-    [HttpGet("/vendors/{id}/orders/new")]
+
+    [HttpGet("/vendors/{vendorId}}/orders/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    [HttpPost("vendors/{id}/orders")]
+    [HttpPost("vendors/{vendorId}/orders")]
     public ActionResult Create()
     {
       return RedirectToAction("Show");
     }
 
-    [HttpGet("/vendors/{id}/orders/{id}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show()
     {
       return View();

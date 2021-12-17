@@ -1,0 +1,17 @@
+@using VendorsOrders.Models;
+
+<h2>Vendors Index</h2>
+@if (Vendor.AllVendors.Count == 0)
+{
+  <p>No vendors in system. Please use the link below to add a vendor.</p>
+}
+else
+{
+  <ul>
+  @foreach (Vendor vendor in Vendor.AllVendors)
+  {
+    <li><a href="">@vendor.Name</a></li>
+  }
+  </ul>
+}
+<a href="">Add a vendor</a>

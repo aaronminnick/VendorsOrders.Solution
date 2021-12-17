@@ -22,7 +22,7 @@ namespace VendorsOrders.Controllers
       return RedirectToAction("/"); //redirect to home is assignment requirement
     }
 
-    [HttpGet("/vendors/{id}")]
+    [HttpGet("/vendors/{vendorId}")]
     public ActionResult Show()
     {
       return View();
