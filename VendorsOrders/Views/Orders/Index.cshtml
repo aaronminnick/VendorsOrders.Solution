@@ -12,7 +12,7 @@ else
   <ul>
   @foreach (Order order in Order.AllOrders)
   {
-    <li><a href="/vendors/@order.VendorId/order/@order.Id">@order.Name</a></li>
+    <li><a href="/vendors/@order.VendorId/order/@order.Id">@order.Title</a></li>
   }
   </ul>
 }

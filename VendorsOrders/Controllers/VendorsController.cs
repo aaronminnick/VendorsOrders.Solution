@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using VendorsOrders.Models;
 
 namespace VendorsOrders.Controllers
 {
@@ -26,7 +27,7 @@ namespace VendorsOrders.Controllers
     [HttpGet("/vendors/{vendorId}")]
     public ActionResult Show(int vendorId)
     {
-      Vendors vendor = Vendor.Find(vendorId);
+      Vendor vendor = Vendor.Find(vendorId);
       return View();
     }
   }

@@ -20,7 +20,7 @@ namespace VendorsOrders.Models
       Id = AllVendors.Count - 1;
     }
 
-    public Vendor Find(int id)
+    public static Vendor Find(int id)
     {
       return AllVendors[id];
     }
