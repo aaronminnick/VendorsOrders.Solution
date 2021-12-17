@@ -24,5 +24,10 @@ namespace VendorsOrders.Models
     {
       return AllVendors[id];
     }
+
+    public static void ClearAll()
+    {
+      AllVendors.Clear();
+    }
   }
 }
