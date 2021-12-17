@@ -4,14 +4,15 @@
 @if (Order.AllOrders.Count == 0)
 {
   <p>No orders in system. Please add orders through the individual vendor.</p>
-  <a href="">Vendors Index</a>
+  <a href="/vendors">Vendors Index</a>
 }
 else
 {
+  <p>Select an order to view details.</p>
   <ul>
   @foreach (Order order in Order.AllOrders)
   {
-    <li><a href="">@order.Name</a></li>
+    <li><a href="/vendors/@order.VendorId/order/@order.Id">@order.Name</a></li>
   }
   </ul>
 }

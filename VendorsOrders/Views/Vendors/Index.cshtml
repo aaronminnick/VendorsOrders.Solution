@@ -10,8 +10,8 @@ else
   <ul>
   @foreach (Vendor vendor in Vendor.AllVendors)
   {
-    <li><a href="">@vendor.Name</a></li>
+    <li><a href="/vendors/@vendor.id">@vendor.Name</a></li>
   }
   </ul>
 }
-<a href="">Add a vendor</a>
+<a href="/vendors/new">Add a vendor</a>

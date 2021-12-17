@@ -1,0 +1,12 @@
+<h2>Add a new order:</h2>
+<form action="/vendors/{vendorId}/orders" method="post">
+  <label for="order-title">Order Title:</label>
+  <input id="order-title" name="title" type="text" required>
+  <label for="order-description">Description:</label>
+  <textarea id="order-description" name="description" required></textarea>
+  <label for="order-price">Price:</label>
+  <input id="order-price" name="price" type="number" min="0" step=".01" required>
+  <label for="order-date">Date:</label>
+  <input id="order-date" name="date" type="text" required>
+  <button type="submit">Add order</button>
+</form>
