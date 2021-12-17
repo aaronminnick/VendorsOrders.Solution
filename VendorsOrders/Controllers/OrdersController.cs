@@ -25,7 +25,7 @@ namespace VendorsOrders.Controllers
       Order order = new Order(title, description, float.Parse(price), date, vendorId);
       Vendor vendor = Vendor.Find(vendorId);
       vendor.Orders.Add(order);
-      return RedirectToAction("Show", "Vendors", vendorId);
+      return RedirectToAction("Show", "Vendors", new {vendorId});
     }
 
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
