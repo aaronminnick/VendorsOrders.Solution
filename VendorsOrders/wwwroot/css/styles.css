@@ -25,3 +25,23 @@ a {
 input, textarea, label {
   display: block;
 }
+
+h3 {
+  color: brown;
+  font-weight: bold;
+}
+
+li {
+  border: 2px wheat dotted;
+  padding: .5em;
+  list-style-type: square;
+}
+
+li button {
+  display: inline;
+  font-size: .6em;
+  font-weight: bold;
+  background-color: wheat;
+  border-radius: 10%;
+  border: 1px brown solid;
+}
