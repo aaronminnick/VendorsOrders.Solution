@@ -36,5 +36,16 @@ namespace VendorsOrders.Tests
       int findId = vendor.Id;
       Assert.AreEqual(vendor, Vendor.Find(findId));
     }
+
+    [TestMethod]
+    public void Remove_CorrectlyReassignsIds_Int()
+    {
+      Vendor vendorIndexZero = new Vendor("zero", "test");
+      Vendor vendorIndexOne = new Vendor("one", "test");
+      Vendor vendorIndexTwo = new Vendor("two", "test"); //three since I don't know if lists are actually serialized
+
+      Vendor.Remove(1);
+      Assert.AreEqual(vendorIndexTwo, Vendor.AllVendors[1]);
+    }
   }
 }

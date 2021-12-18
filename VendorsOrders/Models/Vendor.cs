@@ -25,6 +25,15 @@ namespace VendorsOrders.Models
       return AllVendors[id];
     }
 
+    public static void Remove(int id)
+    {
+      AllVendors.RemoveAt(id);
+      for (int i = 0; i < AllVendors.Count; i++)
+      {
+        AllVendors[i].Id = i;
+      }
+    }
+
     public static void ClearAll()
     {
       AllVendors.Clear();

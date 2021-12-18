@@ -30,6 +30,18 @@ namespace VendorsOrders.Models
       return AllOrders[id];
     }
 
+    public static void Remove(int id)
+    {
+      Order order = Find(id);
+      Vendor.Find(order.VendorId).Orders.Remove(order);
+      AllOrders.Remove(order);
+      
+      for (int i = 0; i < AllOrders.Count; i++)
+      {
+        AllOrders[i].Id = i;
+      }
+    }
+
     public static void ClearAll()
     {
       AllOrders.Clear();
