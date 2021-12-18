@@ -12,12 +12,12 @@
 }
 else
 {
-  <h3>Orders:</h3>
+  <h3>Orders:</h3>  
   <p>Select an order to view details.</p>
   <ul>
   @foreach (Order order in Model.Orders)
   {
-    <li><a href="/vendors/@order.VendorId/orders/@order.Id">@order.Title</a></li>
+    <li><a href="/vendors/@order.VendorId/orders/@order.Id">@order.Title</a><form action="/vendors/@order.VendorId/orders/@order.Id" method="post"><button type=submit>Delete</button></form></li>
   }
   </ul>
 }

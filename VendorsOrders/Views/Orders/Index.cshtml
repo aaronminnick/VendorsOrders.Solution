@@ -16,7 +16,7 @@ else
   <ul>
   @foreach (Order order in Order.AllOrders)
   {
-    <li><a href="/vendors/@order.VendorId/orders/@order.Id">@order.Title (for @Vendor.Find(order.VendorId).Name)</a></li>
+    <li><a href="/vendors/@order.VendorId/orders/@order.Id">@order.Title </a>(for <a href="/vendors/@order.VendorId">@Vendor.Find(order.VendorId).Name</a>)</li>
   }
   </ul>
 }

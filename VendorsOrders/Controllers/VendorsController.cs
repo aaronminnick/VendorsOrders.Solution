@@ -30,5 +30,12 @@ namespace VendorsOrders.Controllers
       Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
     }
+
+    [HttpPost("/vendors/{vendorId}")]
+    public ActionResult Destroy(int vendorId)
+    {
+      Vendor.Remove(vendorId);
+      return RedirectToAction("Index");
+    }
   }
 }

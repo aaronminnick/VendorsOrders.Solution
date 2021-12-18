@@ -34,5 +34,12 @@ namespace VendorsOrders.Controllers
       Order order = Order.Find(orderId);
       return View(order);
     }
+
+    [HttpPost("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Destroy(int vendorId, int orderId)
+    {
+      Order.Remove(orderId);
+      return RedirectToAction("Show", "Vendors", new {vendorId});
+    }
   }
 }
